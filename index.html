@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Isa Dewanda | 2026</title>
-    <meta name="description" content="Open Book 2026 | Photographer - Portofolio, Instagram, Spotify, Tiktok. Kumpulan tautan resmi Isa Dewanda.">
+    <title>Isa Dewanda | 2026 | Open Book & Playlist</title>
+    <meta name="description" content="Open Book 2026 | Photographer - Portofolio, Playlist, Instagram, Spotify, Tiktok. Kumpulan tautan resmi & playlist Isa Dewanda.">
     
     <!-- Open Graph / Social Media Meta Tags (Fixed) -->
-    <meta property="og:title" content="Link - Isa Dewanda | Open Book 2026">
-    <meta property="og:description" content="Photographer | Portofolio, Instagram, Spotify, Tiktok & more. Klik tautan untuk terhubung dengan Isa Dewanda.">
+    <meta property="og:title" content="Link & Playlist - Isa Dewanda | Open Book 2026">
+    <meta property="og:description" content="Photographer | Portofolio, Spotify Playlist, Instagram, Tiktok & more. Dengarkan playlist favoritku!">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://isadewanda.my.id/link">
     <meta property="og:image" content="https://saderawisuda.my.id/p/img/1773069672013%20(1).png">
@@ -17,8 +17,8 @@
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Link - Isa Dewanda | Open Book 2026">
-    <meta name="twitter:description" content="Photographer | Portofolio, Instagram, Spotify, Tiktok & more.">
+    <meta name="twitter:title" content="Link & Playlist - Isa Dewanda | Open Book 2026">
+    <meta name="twitter:description" content="Photographer | Portofolio, Spotify Playlist, Instagram, Tiktok & more.">
     <meta name="twitter:image" content="https://saderawisuda.my.id/p/img/1773069672013%20(1).png">
     
     <!-- Tailwind CSS -->
@@ -113,6 +113,18 @@
              box-shadow: inset -4px -4px 0px 0px rgba(0,0,0,0.3), inset 4px 4px 0px 0px rgba(255,255,255,0.8);
         }
         
+        /* Tema untuk container playlist (Block Power-up / Star) */
+        .playlist-container {
+            background-color: #2c2c2c;
+            border: 4px solid #f8b800;
+            box-shadow: inset -3px -3px 0px 0px rgba(0,0,0,0.5), inset 3px 3px 0px 0px rgba(255,255,255,0.2), 6px 6px 0px 0px #000;
+            border-radius: 0px;
+            transition: transform 0.1s ease;
+        }
+        .playlist-container:hover {
+            transform: translateY(-3px);
+        }
+        
         /* Modifikasi SVG untuk kontras di background pixel */
         .svg-icon {
             filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.3));
@@ -151,11 +163,19 @@
             50% { transform: translateY(-4px); }
         }
 
+        /* Custom note icon & star untuk playlist header */
+        .star-pixel {
+            filter: drop-shadow(2px 2px 0px #000);
+        }
+
         /* Optimasi mobile: fix overflow */
         @media (max-width: 640px) {
             .flying-turtle {
                 width: 45px;
                 top: 12vh;
+            }
+            .playlist-container iframe {
+                height: 280px;
             }
         }
     </style>
@@ -178,12 +198,45 @@
         </div>
 
         <!-- Judul / Deskripsi -->
-        <h1 class="text-[12px] md:text-sm text-white nes-text-shadow mb-10 text-center leading-loose">
-            Isa Dewanda <br> <span class="text-[#f8b800]">About</span>
+        <h1 class="text-[12px] md:text-sm text-white nes-text-shadow mb-6 text-center leading-loose">
+            Isa Dewanda <br> <span class="text-[#f8b800]">Open Book 2026</span>
         </h1>
+        
+        <!-- Sub Judul Pixel: Music Power-Up -->
+        <div class="mb-6 flex items-center gap-3 bg-black/40 px-4 py-2 rounded-md border border-[#f8b800]">
+            <span class="text-yellow-300 text-lg">🎵</span>
+            <p class="text-[8px] text-white nes-text-shadow tracking-wider">POWER-UP PLAYLIST</p>
+            <span class="text-red-500 text-lg">⭐</span>
+        </div>
 
-        <!-- Daftar Tautan -->
-        <div class="w-full flex flex-col gap-6">
+        <!-- ============== SECTION PLAYLIST SPOTIFY (Gaya Blok Super Mario) ============== -->
+        <div class="w-full mb-8 playlist-container p-1">
+            <div class="bg-black/60 p-2 flex items-center justify-between border-b-2 border-[#f8b800] mb-1">
+                <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5 fill-[#1DB954]" viewBox="0 0 496 512" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M248 8C111.1 8 0 119.1 0 256s111.1 248 248 248 248-111.1 248-248S384.9 8 248 8zm100.7 364.9c-4.2 0-6.8-1.3-10.7-3.6-62.4-37.6-135-39.2-206.7-24.5-3.9 1-9 2.6-11.9 2.6-9.7 0-15.8-7.7-15.8-15.8 0-10.3 6.1-15.2 13.6-16.8 81.9-18.1 165.6-16.5 237 26.2 6.1 3.9 9.7 7.4 9.7 16.5s-7.1 15.4-15.2 15.4zm26.9-65.6c-5.2 0-8.7-2.3-12.3-4.2-62.5-37-155.7-51.9-238.6-29.4-4.8 1.3-7.4 2.6-11.9 2.6-10.7 0-19.4-8.7-19.4-19.4s5.2-17.8 15.5-20.7c27.8-7.8 56.2-13.6 97.8-13.6 64.9 0 127.6 16.1 177 45.5 8.1 4.8 11.3 11 11.3 19.7-.1 10.8-8.5 19.5-19.4 19.5zm31-76.2c-5.2 0-8.4-1.3-12.9-3.9-71.2-42.5-198.5-52.7-280.9-29.7-3.6 1-8.1 2.6-12.9 2.6-13.2 0-23.3-10.3-23.3-23.6 0-13.6 8.4-21.3 17.4-23.9 35.2-10.3 74.6-15.2 117.5-15.2 73 0 149.5 15.2 205.4 47.8 7.8 4.5 12.9 10.7 12.9 22.6 0 13.6-11 23.3-23.2 23.3z"></path>
+                    </svg>
+                    <span class="text-[8px] text-yellow-300 font-bold tracking-wider">★ JUARA HARI INI ★</span>
+                </div>
+                <div class="text-[6px] text-white/70">POWER MODE</div>
+            </div>
+            <!-- Embed Spotify Playlist -->
+            <iframe 
+                data-testid="embed-iframe" 
+                style="border-radius:8px; border: none; display: block; width: 100%;" 
+                src="https://open.spotify.com/embed/playlist/5xTL7EvbCI7R341qtHEvBa?utm_source=generator" 
+                width="100%" 
+                height="352" 
+                frameBorder="0" 
+                allowfullscreen="" 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                loading="lazy">
+            </iframe>
+            <div class="text-[6px] text-center text-white/60 p-1 mt-1">🎮 8-BIT AUDIO ADVENTURE • PRESS PLAY</div>
+        </div>
+
+        <!-- Daftar Tautan (Link) -->
+        <div class="w-full flex flex-col gap-6 mt-2">
             
             <!-- Whatsapp (Pipa Hijau) -->
             <a href="https://wa.link/9vjl27" target="_blank" rel="noopener noreferrer" class="nes-btn pipe-block flex items-center p-4">
@@ -230,7 +283,7 @@
                 <svg class="w-6 h-6 mr-4 fill-white svg-icon" viewBox="0 0 496 512" xmlns="http://www.w3.org/2000/svg">
                     <path d="M248 8C111.1 8 0 119.1 0 256s111.1 248 248 248 248-111.1 248-248S384.9 8 248 8zm100.7 364.9c-4.2 0-6.8-1.3-10.7-3.6-62.4-37.6-135-39.2-206.7-24.5-3.9 1-9 2.6-11.9 2.6-9.7 0-15.8-7.7-15.8-15.8 0-10.3 6.1-15.2 13.6-16.8 81.9-18.1 165.6-16.5 237 26.2 6.1 3.9 9.7 7.4 9.7 16.5s-7.1 15.4-15.2 15.4zm26.9-65.6c-5.2 0-8.7-2.3-12.3-4.2-62.5-37-155.7-51.9-238.6-29.4-4.8 1.3-7.4 2.6-11.9 2.6-10.7 0-19.4-8.7-19.4-19.4s5.2-17.8 15.5-20.7c27.8-7.8 56.2-13.6 97.8-13.6 64.9 0 127.6 16.1 177 45.5 8.1 4.8 11.3 11 11.3 19.7-.1 10.8-8.5 19.5-19.4 19.5zm31-76.2c-5.2 0-8.4-1.3-12.9-3.9-71.2-42.5-198.5-52.7-280.9-29.7-3.6 1-8.1 2.6-12.9 2.6-13.2 0-23.3-10.3-23.3-23.6 0-13.6 8.4-21.3 17.4-23.9 35.2-10.3 74.6-15.2 117.5-15.2 73 0 149.5 15.2 205.4 47.8 7.8 4.5 12.9 10.7 12.9 22.6 0 13.6-11 23.3-23.2 23.3z"></path>
                 </svg>
-                <span class="text-[10px] md:text-xs flex-grow text-center pr-10 uppercase tracking-widest">Spotify</span>
+                <span class="text-[10px] md:text-xs flex-grow text-center pr-10 uppercase tracking-widest">Spotify Profile</span>
             </a>
 
             <!-- Tiktok Mampir Sejena (Batu Bata) -->
@@ -269,7 +322,7 @@
         
         <!-- Footer -->
         <footer class="mt-16 text-[8px] text-white nes-text-shadow tracking-widest text-center">
-            <p>© 2026 ISA DEWANDA.<br><br>ALL RIGHTS RESERVED.</p>
+            <p>© 2026 ISA DEWANDA.<br>🎮 PRESS START • ALL RIGHTS RESERVED.</p>
         </footer>
 
         <!-- Container Bata dan Karakter yang dimodifikasi khusus untuk Mobile -->
